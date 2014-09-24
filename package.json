@@ -1,0 +1,12 @@
+{
+  "name": "Luoo.Client",
+  "main": "index.html",  
+  "window": {
+	"title":"落网客户端",
+    "icon": "assets/images/favicon.ico",
+    "resizable" : false,
+	"height": 600,
+	"width": 800,
+	"toolbar"	: false
+  }
+}

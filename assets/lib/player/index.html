@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+	<title>网友Null分享Jquery+HTML5实现音乐播放器</title>
+	<link rel="stylesheet" href="css/stylesheets/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+</head>
+<body>
+<center>
+    <div style="font-size:15px; font-weight:bold; text-align:center; line-height:25px; clear:both; position:relative; z-index:1;">网友Null分享Jquery+HTML5实现音乐播放器<br />
+      JquerySchool网站出品（<a href="http://www.jq-school.com" target="_blank" style="color:#000000">http://www.jq-school.com</a>）	
+	  <br />
+	   网友Null个人博客（<a href="http://www.nullblogs.com/" target="_blank" style="color:#000000">http://www.nullblogs.com/</a>）	
+	  <br />
+      官方网站学习交流QQ群<a target="_blank" href="http://wp.qq.com/wpa/qunwpa?idkey=47d9817e9e09f61b288b8ad6d33fb18cbd659ca6773f663918d6e5d3a2981a12"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="Jquery学堂③群" title="Jquery学堂③群"></a> </div>
+  </center>
+	<div id="background"></div>
+	<div id="player">
+		<div class="cover"></div>
+		<div class="ctrl">
+			<div class="tag">
+				<strong>Title</strong>
+				<span class="artist">Artist</span>
+				<span class="album">Album</span>
+			</div>
+			<div class="control">
+				<div class="left">
+					<div class="rewind icon"></div>
+					<div class="playback icon"></div>
+					<div class="fastforward icon"></div>
+				</div>
+				<div class="volume right">
+					<div class="mute icon left"></div>
+					<div class="slider left">
+						<div class="pace"></div>
+					</div>
+				</div>
+			</div>
+			<div class="progress">
+				<div class="slider">
+					<div class="loaded"></div>
+					<div class="pace"></div>
+				</div>
+				<div class="timer left">0:00</div>
+				<div class="right">
+					<div class="repeat icon"></div>
+					<div class="shuffle icon"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<ul id="playlist"></ul>
+	<footer>
+		Copyright &copy; 2013 <a href="http://www.nullblogs.com">Null</a>
+	</footer>
+	<script src="js/jquery-ui-1.8.17.custom.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>

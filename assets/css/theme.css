@@ -1,0 +1,37 @@
+#main{
+	margin: 0;
+	padding: 0;
+}
+#left-bar{
+	background-color:#F2F2F2;
+	height:100%;
+	width:25%;
+    position:fixed;
+    display: block;
+}
+#left-bar>div{
+	height:100%;
+	line-height:100%;
+	text-align: center;
+}
+#btn-signin{
+	margin-right:10px;
+}
+#btn-register{
+	margin-right:10px;
+}
+#right-content{
+	position:fixed;
+	margin-left:28%;
+	margin-right:2%;
+	margin-top:1%;
+	width:70%;
+}
+
+#music-main{
+	width:100%;
+	padding: 0;
+}
+#music-main>div{
+	width:100%;
+}
