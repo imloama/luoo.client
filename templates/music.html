@@ -5,9 +5,32 @@
 		  <li class="active">期刊</li>
 		</ol>
 	</div>
-
+	<!--专辑下载-->
 	<div class="row">
+		<table class="table table-hover">
+			<thead>
+				<th>#</th>
+				<th>歌手</th>
+				<th>歌曲名称</th>
+				<th>下载地址</th>
+				<th>播放</th>
+				<th ng-click="downAll(playlist)"><i class="fa fa-download fa-lg"></i></th>
+			</thead>
+			<tbody>
+				<tr ng-repeat="play in playlist">
+		  			<td>{{$index+1}}</td>
+		  			<td>{{play.artist}}</td>
+		  			<td>{{play.title}}</td>
+		  			<td>{{play.mp3}}</td>
+		  			<td><i class="fa fa-play fa-lg"  ng-click="playM(play)"></i></td>
+		  			<td ng-click="downP(play)"><i class="fa fa-download fa-lg"></i></td>
+		  		</tr>
+			</tbody>
+		</table>
 		
+	</div>
+	<div class="row" style="height:50px;">
+		<audio id="player" src="{{currPlaymp3}}" src="http://luoo.800edu.net/low/luoo/S7/01.mp3" controls="controls">></audio>
 	</div>
 </div>
 

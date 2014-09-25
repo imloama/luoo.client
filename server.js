@@ -139,7 +139,6 @@ exports.types = {
   "xml": "text/xml"
 };
 
-
 var PORT = 3000;
 
 var http = require('http');

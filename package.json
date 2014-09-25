@@ -1,6 +1,8 @@
 {
   "name": "Luoo.Client",
-  "main": "index.html",  
+  "main": "index.html", 
+  "single-instance":true,
+  "node-main":"main.js", 
   "window": {
 	"title":"落网客户端",
     "icon": "assets/images/favicon.ico",
