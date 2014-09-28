@@ -52,6 +52,29 @@ function findVolTitle(html){
 	return result;
 }
 
+function downloadAll(vol){
+	console.log(vol);
+	var title = vol.title;
+	var fmPath = path.join(downloadDir, title);
+	if (!fs.existsSync(fmPath)) {
+      fs.mkdirSync(fmPath);
+      vol.playlist.forEach(function(mp3Info){
+	      downloadMp3(title,mp3Info);
+	    });  
+    }
+}
+
+function downloadMp3(title,mp3Info){
+	var fmPath = path.join(downloadDir, title);
+	if (!fs.existsSync(fmPath)) {
+      fs.mkdirSync(fmPath);
+    }
+  var mp3File = path.join(downloadDir,title,mp3Info.title + '.mp3');
+  if (!fs.existsSync(mp3File)) {
+   	 request(mp3Info.mp3).pipe(fs.createWriteStream(mp3File));
+    }
+}
+
 
 module.exports = {
 	look4down:function(id,func){
@@ -61,6 +84,8 @@ module.exports = {
 	},
 	getPlayListStr:function(){return playlistStr;},
 	getAesKey:function(){return aesKey;},
-	getVolTitle:function(){return volTitle;}
+	getVolTitle:function(){return volTitle;},
+	downloadAll:downloadAll,
+	downloadMp3:downloadMp3
 };
 
